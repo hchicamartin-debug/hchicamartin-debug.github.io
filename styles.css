@@ -358,10 +358,11 @@ a:hover ~ .cursor-glow, .cta-button:hover ~ .cursor-glow {
     .menu-item__header { flex-wrap: wrap; }
     .menu-item__leader { margin: 0 var(--spacing-sm); }
     .menu-item__description { padding-left: 0; }
+    .menu-item__title { white-space: normal; }
 }
 
 @media (max-width: 480px) {
-    .section { padding: var(--spacing-lg) var(--spacing-sm); }
+    .section { padding: var(--spacing-lg) var(--spacing-md); }
     .hero__title { font-size: 2.2rem; }
     .section-title { font-size: 2rem; }
     .visit__card .section-title { font-size: 2rem; }
