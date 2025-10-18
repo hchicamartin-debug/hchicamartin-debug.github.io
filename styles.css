@@ -281,16 +281,93 @@ a:hover ~ .cursor-glow, .cta-button:hover ~ .cursor-glow {
 .modal__price { font-size: 1.6rem; font-weight: bold; color: var(--text-light); margin-top: var(--spacing-md); }
 
 /* ==================== RESPONSIVE ==================== */
+
+.nav-toggle {
+    display: none; /* Oculto por defecto */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+}
+
+.nav-toggle__line {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: var(--text-light);
+    margin: 6px 0;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
 @media (max-width: 900px) {
     .footer__container { grid-template-columns: 1fr; }
     .team__container { flex-direction: column; align-items: center; gap: var(--spacing-xl); }
     .visit__container { grid-template-columns: 1fr; }
     .contact-form { grid-template-columns: 1fr; }
+    .section { padding: var(--spacing-xl) var(--spacing-md); }
+    .hero__title { font-size: 3.5rem; }
+    .hero__subtitle { font-size: 1.2rem; }
+    .section-title { font-size: 2.5rem; }
+    .visit__card { padding: var(--spacing-xl) var(--spacing-md); }
+    .visit__card-content p { font-size: 1rem; }
 }
 
 @media (max-width: 768px) {
-    .nav { display: none; }
+    .nav { 
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(26, 26, 26, 0.95);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+    }
+    .nav.active {
+        transform: translateX(0);
+    }
+    .nav__list { 
+        flex-direction: column;
+        gap: var(--spacing-lg);
+        text-align: center;
+    }
+    .nav__link {
+        font-size: 1.5rem;
+    }
+    .nav-toggle {
+        display: block;
+    }
+    .nav-open .nav-toggle__line:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .nav-open .nav-toggle__line:nth-child(2) {
+        opacity: 0;
+    }
+    .nav-open .nav-toggle__line:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
     .hero__title { font-size: 2.8rem; }
     .lateral-ornament { display: none; }
     .modal__body { grid-template-columns: 1fr; }
+    .menu-item__header { flex-wrap: wrap; }
+    .menu-item__leader { margin: 0 var(--spacing-sm); }
+    .menu-item__description { padding-left: 0; }
+}
+
+@media (max-width: 480px) {
+    .section { padding: var(--spacing-lg) var(--spacing-sm); }
+    .hero__title { font-size: 2.2rem; }
+    .section-title { font-size: 2rem; }
+    .visit__card .section-title { font-size: 2rem; }
+    .team__member-img { width: 150px; height: 150px; }
+    .gallery__item { flex-basis: 280px; height: 400px; }
+    .footer__column { text-align: center; }
+    .footer__column p { max-width: none; }
+    .footer__socials { justify-content: center; flex-direction: row; }
 }

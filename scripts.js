@@ -4,10 +4,37 @@ document.addEventListener('DOMContentLoaded', () => {
     // EFECTO DE BRILLO DEL CURSOR
     // ====================================================================
     const cursorGlow = document.querySelector('.cursor-glow');
-    if (cursorGlow) {
+    if (cursorGlow && window.matchMedia("(min-width: 769px)").matches) { // Solo en escritorio
         document.addEventListener('mousemove', (e) => {
             cursorGlow.style.left = `${e.clientX}px`;
             cursorGlow.style.top = `${e.clientY}px`;
+        });
+    }
+
+    // ====================================================================
+    // MENÚ DE NAVEGACIÓN MÓVIL (HAMBURGUESA)
+    // ====================================================================
+    const navToggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav');
+
+    if (navToggle && nav) {
+        navToggle.addEventListener('click', () => {
+            document.body.classList.toggle('nav-open');
+            nav.classList.toggle('active');
+            // Para accesibilidad
+            const isExpanded = nav.classList.contains('active');
+            navToggle.setAttribute('aria-expanded', isExpanded);
+        });
+
+        // Cerrar menú al hacer clic en un enlace
+        nav.querySelectorAll('.nav__link').forEach(link => {
+            link.addEventListener('click', () => {
+                if (document.body.classList.contains('nav-open')) {
+                    document.body.classList.remove('nav-open');
+                    nav.classList.remove('active');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
         });
     }
 
@@ -65,7 +92,8 @@ document.addEventListener('DOMContentLoaded', () => {
             modal.classList.add('active');
             modal.setAttribute('aria-hidden', 'false');
             document.body.style.overflow = 'hidden';
-            modal.querySelector('.modal__close-btn').focus();
+            // Esperar un poco para que el modal sea visible antes de enfocar
+            setTimeout(() => modal.querySelector('.modal__close-btn').focus(), 100);
         }
 
         function closeModal() {
@@ -83,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const imgPlaceholder = item.dataset.imgPlaceholder;
 
                 const modalContent = `
-                    <div class="modal__img-placeholder" style="background-image: ${imgPlaceholder}; background-size: cover; background-position: center;"></div>
+                    <div class="modal__img-placeholder" style="background-image: ${imgPlaceholder};"></div>
                     <div class="modal__text-content">
                         <h3 class="modal__title">${title}</h3>
                         <p class="modal__description">${description}</p>
@@ -98,29 +126,4 @@ document.addEventListener('DOMContentLoaded', () => {
         modal.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
     }
 
-    // ====================================================================
-    // VALIDACIÓN DEL FORMULARIO DE CONTACTO
-    // ====================================================================
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const formFeedback = this.querySelector('#form-feedback');
-            const name = this.querySelector('#name').value.trim();
-            const email = this.querySelector('#email').value.trim();
-            const subject = this.querySelector('#subject').value.trim();
-            const message = this.querySelector('#message').value.trim();
-
-            if (!name || !email || !subject || !message) {
-                formFeedback.textContent = 'Por favor, complete todos los campos requeridos.';
-                formFeedback.className = 'form-feedback error';
-                return;
-            }
-
-            formFeedback.textContent = `¡Gracias, ${name}! Hemos recibido tu consulta. Te responderemos pronto.`;
-            formFeedback.className = 'form-feedback success';
-            this.reset();
-            setTimeout(() => { formFeedback.textContent = ''; }, 8000);
-        });
-    }
 });
