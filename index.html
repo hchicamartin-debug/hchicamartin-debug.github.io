@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARÉA Restaurante - Cocina de Autor</title>
+    <meta name="description" content="MARÉA Restaurante ofrece una experiencia culinaria única con inspiración marina y productos de temporada.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- JS (diferido para no bloquear el renderizado) -->
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <div class="cursor-glow"></div>
+    <div class="lateral-ornament left"></div>
+    <div class="lateral-ornament right"></div>
+
+    <!-- ==================== CABECERA FIJA ==================== -->
+    <header class="header">
+        <a href="#inicio" class="header__logo">MARÉA</a>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#inicio" class="nav__link">Inicio</a></li>
+                <li class="nav__item"><a href="carta.html" class="nav__link">Carta</a></li>
+                <li class="nav__item"><a href="#visitarnos" class="nav__link">Visítanos</a></li>
+                <li class="nav__item"><a href="#equipo" class="nav__link">Equipo</a></li>
+                <li class="nav__item"><a href="#galeria" class="nav__link">Galería</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ==================== HERO ==================== -->
+        <section id="inicio" class="hero section">
+            <div class="hero__content">
+                <h1 class="hero__title animate-fade-in-up">BIENVENIDOS A MARÉA</h1>
+                <p class="hero__subtitle animate-fade-in-up" style="animation-delay: 0.3s;">El sabor del mar, la calma de la tierra.</p>
+                <a href="carta.html" class="cta-button animate-fade-in-up" style="animation-delay: 0.6s;">Descubrir la Carta</a>
+            </div>
+            <a href="#visitarnos" class="scroll-down-arrow" aria-label="Ir a la siguiente sección">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+            </a>
+        </section>
+
+        <!-- ==================== VISITANOS (Horario y Encuéntranos) ==================== -->
+        <section id="visitarnos" class="visit section">
+            <div class="visit__container">
+                <div class="visit__card reveal">
+                    <div class="section-title-container">
+                        <h2 class="section-title">Horario</h2>
+                        <div class="title-ornament"></div>
+                    </div>
+                    <div class="visit__card-content">
+                        <p><strong>Lunes</strong><span class="dots"></span>Cerrado</p>
+                        <p><strong>Martes a Sábado</strong><span class="dots"></span>13:00 - 16:00 | 20:00 - 23:30</p>
+                        <p><strong>Domingo</strong><span class="dots"></span>13:00 - 17:00</p>
+                    </div>
+                </div>
+                <div class="visit__card reveal" style="transition-delay: 0.2s;">
+                    <div class="section-title-container">
+                        <h2 class="section-title">Encuéntranos</h2>
+                        <div class="title-ornament"></div>
+                    </div>
+                    <div class="visit__card-content">
+                        <p>Calle Periodista Eduardo Molina Fajardo<br>18014, Granada</p>
+                        <p><a href="tel:+34958112233">+34 958 11 22 33</a></p>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Calle+Periodista+Eduardo+Molina+Fajardo,+Granada" target="_blank" rel="noopener noreferrer" class="cta-button cta-button--small">Cómo llegar</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== EQUIPO ==================== -->
+        <section id="equipo" class="team section">
+            <div class="section-title-container reveal">
+                <h2 class="section-title">Nuestro Equipo</h2>
+                <div class="title-ornament"></div>
+                <p class="section-subtitle reveal">La pasión y la excelencia son los ingredientes principales de nuestra cocina.</p>
+            </div>
+            <div class="team__container">
+                <div class="team__member reveal">
+                    <img src="https://images.unsplash.com/photo-1581299894007-aaa50297cf16?w=500&q=80" alt="Retrato del Chef" class="team__member-img">
+                    <h3 class="team__member-name">Javier Ríos</h3>
+                    <p class="team__member-role">Chef Ejecutivo</p>
+                </div>
+                <div class="team__member reveal" style="transition-delay: 0.2s;">
+                    <img src="https://images.unsplash.com/photo-1559035193-21e868317d2c?w=500&q=80" alt="Retrato de la Sommelier" class="team__member-img">
+                    <h3 class="team__member-name">Sofía Lorente</h3>
+                    <p class="team__member-role">Jefa de Sala & Sommelier</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== GALERÍA ==================== -->
+        <section id="galeria" class="gallery section">
+            <div class="section-title-container reveal">
+                <h2 class="section-title">Un Vistazo a Nuestro Mundo</h2>
+                <div class="title-ornament"></div>
+            </div>
+            <div class="gallery__scroll-container reveal">
+                <div class="gallery__item"><img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=600&h=800&fit=crop&q=80" alt="Interior del restaurante de noche"></div>
+                <div class="gallery__item"><img src="https://images.unsplash.com/photo-1578474846511-04ba529f0b88?w=600&h=800&fit=crop&q=80" alt="Plato gourmet servido"></div>
+                <div class="gallery__item"><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600&h=800&fit=crop&q=80" alt="Detalle de una mesa de restaurante"></div>
+                <div class="gallery__item"><img src="https://images.unsplash.com/photo-1579027989536-b7b1f875659b?w=600&h=800&fit=crop&q=80" alt="Cóctel elegante en la barra"></div>
+                <div class="gallery__item"><img src="https://images.unsplash.com/photo-1484659619207-9e2b2b8c5b42?w=600&h=800&fit=crop&q=80" alt="Chef preparando un plato"></div>
+                <div class="gallery__item"><img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&h=800&fit=crop&q=80" alt="Comida a la parrilla"></div>
+                <div class="gallery__item"><img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=600&h=800&fit=crop&q=80" alt="Ensalada fresca y colorida"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==================== PIE DE PÁGINA ==================== -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__column footer__column--brand">
+                <a href="#inicio" class="footer__logo">MARÉA</a>
+                <p>Una experiencia culinaria que une tradición y vanguardia a orillas del Mediterráneo.</p>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__title">Contacto</h3>
+                <p>Calle Periodista Eduardo Molina Fajardo<br>18014, Granada</p>
+                <p>+34 958 11 22 33</p>
+                <p>contacto@marearestaurante.com</p>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__title">Redes Sociales</h3>
+                <div class="footer__socials">
+                    <a href="#" aria-label="Instagram">Instagram</a>
+                    <a href="#" aria-label="Facebook">Facebook</a>
+                    <a href="#" aria-label="TripAdvisor">TripAdvisor</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            &copy; 2025 MARÉA Restaurante. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <!-- ==================== MODAL (sigue disponible para la carta) ==================== -->
+    <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-close-modal></div>
+        <div class="modal__content">
+            <button id="modal-close-btn" class="modal__close-btn" aria-label="Cerrar modal" data-close-modal>&times;</button>
+            <div class="modal__body">
+                <!-- Contenido del modal se insertará aquí -->
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

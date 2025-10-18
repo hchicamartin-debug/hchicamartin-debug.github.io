@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta - MARÉA Restaurante</title>
+    <meta name="description" content="Descubre nuestra carta, una selección de platos elaborados con el mejor producto de temporada.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- JS (diferido para no bloquear el renderizado) -->
+    <script src="scripts.js" defer></script>
+</head>
+<body class="carta-page">
+    <div class="cursor-glow"></div>
+    <div class="lateral-ornament left"></div>
+    <div class="lateral-ornament right"></div>
+
+    <!-- ==================== CABECERA FIJA ==================== -->
+    <header class="header">
+        <a href="index.html#inicio" class="header__logo">MARÉA</a>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="index.html#inicio" class="nav__link">Inicio</a></li>
+                <li class="nav__item"><a href="carta.html" class="nav__link active">Carta</a></li>
+                <li class="nav__item"><a href="index.html#visitarnos" class="nav__link">Visítanos</a></li>
+                <li class="nav__item"><a href="index.html#equipo" class="nav__link">Equipo</a></li>
+                <li class="nav__item"><a href="index.html#galeria" class="nav__link">Galería</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ==================== CARTA ==================== -->
+        <section id="carta" class="menu-elegant section">
+            <div class="section-title-container reveal">
+                <h2 class="section-title">Nuestra Propuesta</h2>
+                <div class="title-ornament"></div>
+            </div>
+
+            <div class="menu-category reveal">
+                <h3 class="menu-category__title">Entrantes</h3>
+                <div class="menu-item" data-title="Tartar de Atún Rojo" data-description="Cortado a cuchillo, con una delicada emulsión de cítricos, aguacate fresco y un toque de wasabi." data-price="18" data-img-placeholder="url('https://images.unsplash.com/photo-1579887829426-2ada5f654735?w=500&q=80')">
+                    <div class="menu-item__header">
+                        <span class="menu-item__title">Tartar de Atún Rojo</span>
+                        <span class="menu-item__leader"></span>
+                        <span class="menu-item__price">18 €</span>
+                    </div>
+                    <p class="menu-item__description">Emulsión cítrica, aguacate y toque de wasabi</p>
+                </div>
+                <div class="menu-item" data-title="Vieira a la Plancha" data-description="Vieira gallega marcada a la plancha sobre una crema ligera de coliflor tostada y aceite de avellana." data-price="22" data-img-placeholder="url('https://images.unsplash.com/photo-1625944022226-2a74d359741a?w=500&q=80')">
+                    <div class="menu-item__header">
+                        <span class="menu-item__title">Vieira a la Plancha</span>
+                        <span class="menu-item__leader"></span>
+                        <span class="menu-item__price">22 €</span>
+                    </div>
+                    <p class="menu-item__description">Crema ligera de coliflor y aceite de avellana</p>
+                </div>
+                <div class="menu-item" data-title="Ensalada de Brotes Tiernos" data-description="Con queso de cabra caramelizado, nueces, y una vinagreta de miel y mostaza antigua." data-price="14" data-img-placeholder="url('https://images.unsplash.com/photo-1551248429-40974011e91d?w=500&q=80')">
+                    <div class="menu-item__header">
+                        <span class="menu-item__title">Ensalada de Brotes Tiernos</span>
+                        <span class="menu-item__leader"></span>
+                        <span class="menu-item__price">14 €</span>
+                    </div>
+                    <p class="menu-item__description">Queso de cabra caramelizado, nueces y vinagreta de miel</p>
+                </div>
+            </div>
+
+            <div class="menu-category reveal" style="transition-delay: 0.2s;">
+                <h3 class="menu-category__title">Pescados</h3>
+                <div class="menu-item" data-title="Lomo de Rodaballo Salvaje" data-description="Cocinado a baja temperatura, servido con una reducción de vino blanco de Rueda y espárragos trigueros." data-price="26" data-img-placeholder="url('https://images.unsplash.com/photo-1621996346565-e326e7e24c2e?w=500&q=80')">
+                    <div class="menu-item__header">
+                        <span class="menu-item__title">Lomo de Rodaballo Salvaje</span>
+                        <span class="menu-item__leader"></span>
+                        <span class="menu-item__price">26 €</span>
+                    </div>
+                    <p class="menu-item__description">Reducción de vino blanco y espárragos trigueros</p>
+                </div>
+                <div class="menu-item" data-title="Merluza de Pincho" data-description="Confitada en aceite de oliva virgen extra, sobre un lecho de pisto tradicional y aire de perejil." data-price="24" data-img-placeholder="url('https://images.unsplash.com/photo-1604591452842-c1b2c2883caf?w=500&q=80')">
+                    <div class="menu-item__header">
+                        <span class="menu-item__title">Merluza de Pincho</span>
+                        <span class="menu-item__leader"></span>
+                        <span class="menu-item__price">24 €</span>
+                    </div>
+                    <p class="menu-item__description">Confitada en AOVE sobre pisto tradicional</p>
+                </div>
+            </div>
+
+            <div class="menu-category reveal" style="transition-delay: 0.4s;">
+                <h3 class="menu-category__title">Carnes</h3>
+                <div class="menu-item" data-title="Solomillo de Ternera" data-description="Marcado a la parrilla, acompañado de un cremoso puré de patata trufado y salsa de Oporto." data-price="28" data-img-placeholder="url('https://images.unsplash.com/photo-1598515214211-89d3c7373014?w=500&q=80')">
+                    <div class="menu-item__header">
+                        <span class="menu-item__title">Solomillo de Ternera</span>
+                        <span class="menu-item__leader"></span>
+                        <span class="menu-item__price">28 €</span>
+                    </div>
+                    <p class="menu-item__description">Puré de patata trufado y salsa de Oporto</p>
+                </div>
+                <div class="menu-item" data-title="Presa Ibérica de Bellota" data-description="Cocinada a la brasa, con un toque de romero y servida con pimientos de Padrón y sal Maldon." data-price="25" data-img-placeholder="url('https://images.unsplash.com/photo-1600891964092-4316c288032e?w=500&q=80')">
+                    <div class="menu-item__header">
+                        <span class="menu-item__title">Presa Ibérica de Bellota</span>
+                        <span class="menu-item__leader"></span>
+                        <span class="menu-item__price">25 €</span>
+                    </div>
+                    <p class="menu-item__description">Brasa de romero y pimientos de Padrón</p>
+                </div>
+            </div>
+
+            <div class="menu-category reveal" style="transition-delay: 0.6s;">
+                <h3 class="menu-category__title">Postres</h3>
+                <div class="menu-item" data-title="Tarta Fina de Manzana" data-description="Recién horneada, con una base de hojaldre crujiente y acompañada de helado de vainilla de Tahití." data-price="8" data-img-placeholder="url('https://images.unsplash.com/photo-1579307886423-a621690353b9?w=500&q=80')">
+                    <div class="menu-item__header">
+                        <span class="menu-item__title">Tarta Fina de Manzana</span>
+                        <span class="menu-item__leader"></span>
+                        <span class="menu-item__price">8 €</span>
+                    </div>
+                    <p class="menu-item__description">Helado de vainilla de Tahití</p>
+                </div>
+                <div class="menu-item" data-title="Coulant de Chocolate Negro" data-description="Corazón líquido de chocolate 70% cacao, servido con sopa de frutos rojos y sorbete de frambuesa." data-price="9" data-img-placeholder="url('https://images.unsplash.com/photo-1586985289906-406d13c33499?w=500&q=80')">
+                    <div class="menu-item__header">
+                        <span class="menu-item__title">Coulant de Chocolate Negro</span>
+                        <span class="menu-item__leader"></span>
+                        <span class="menu-item__price">9 €</span>
+                    </div>
+                    <p class="menu-item__description">Corazón líquido 70% y sopa de frutos rojos</p>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- ==================== PIE DE PÁGINA ==================== -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__column footer__column--brand">
+                <a href="index.html#inicio" class="footer__logo">MARÉA</a>
+                <p>Una experiencia culinaria que une tradición y vanguardia a orillas del Mediterráneo.</p>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__title">Contacto</h3>
+                <p>Calle Periodista Eduardo Molina Fajardo<br>18014, Granada</p>
+                <p>+34 958 11 22 33</p>
+                <p>contacto@marearestaurante.com</p>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__title">Redes Sociales</h3>
+                <div class="footer__socials">
+                    <a href="#" aria-label="Instagram">Instagram</a>
+                    <a href="#" aria-label="Facebook">Facebook</a>
+                    <a href="#" aria-label="TripAdvisor">TripAdvisor</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            &copy; 2025 MARÉA Restaurante. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <!-- ==================== MODAL ==================== -->
+    <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-close-modal></div>
+        <div class="modal__content">
+            <button id="modal-close-btn" class="modal__close-btn" aria-label="Cerrar modal" data-close-modal>&times;</button>
+            <div class="modal__body">
+                <!-- Contenido del modal se insertará aquí -->
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
