@@ -314,6 +314,9 @@ a:hover ~ .cursor-glow, .cta-button:hover ~ .cursor-glow {
 }
 
 @media (max-width: 768px) {
+    body.carta-page {
+        overflow-x: hidden;
+    }
     .nav { 
         display: flex;
         position: fixed;
