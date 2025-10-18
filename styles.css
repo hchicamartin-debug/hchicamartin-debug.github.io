@@ -329,11 +329,13 @@ a:hover ~ .cursor-glow, .cta-button:hover ~ .cursor-glow {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        transform: translateX(100%);
-        transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.4s ease, visibility 0.4s ease;
     }
     .nav.active {
-        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
     }
     .nav__list { 
         flex-direction: column;
